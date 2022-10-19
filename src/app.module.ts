@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { Logger, Module } from '@nestjs/common';
 import configuration from './configuration';
 import { ConfigModule } from '@nestjs/config';
 
@@ -11,6 +11,6 @@ import { ConfigModule } from '@nestjs/config';
     }),
   ],
   controllers: [],
-  providers: [],
+  providers: [Logger],
 })
 export class AppModule {}

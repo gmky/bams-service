@@ -27,9 +27,7 @@ openapi:
   path: api-docs
 
 logging:
-  level:
-    - error
-    - warn
-    - info
-    - debug
-    - verbose
+  level: debug
+  color: true
+  maxSize: 50000
+  maxFiles: 10
