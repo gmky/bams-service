@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from '@nestjs/typeorm';
 import { IDatabaseConfig } from 'src/shared/configs';
+import { User } from './entities';
 
 @Injectable()
 export class DBFactory implements TypeOrmOptionsFactory {
@@ -19,7 +20,8 @@ export class DBFactory implements TypeOrmOptionsFactory {
       username: dbConfig.user,
       password: dbConfig.pass,
       database: dbConfig.name,
-      entities: [],
+      entities: [User],
+      synchronize: true,
     };
   }
 }

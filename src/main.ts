@@ -33,7 +33,6 @@ async function bootstrap() {
   );
 
   // Config OpenAPI
-  const openApiConfig = configService.get<IOpenAPIConfig>('openapi');
   const openapiConfig = configService.get<IOpenAPIConfig>('openapi');
   const swaggerDocumentBuilder = new DocumentBuilder()
     .setTitle(openapiConfig.name)

@@ -1,6 +1,7 @@
 import { Global, Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DBFactory } from './database.factory';
+import { User } from './entities';
 
 @Global()
 @Module({
@@ -8,6 +9,7 @@ import { DBFactory } from './database.factory';
     TypeOrmModule.forRootAsync({
       useClass: DBFactory,
     }),
+    TypeOrmModule.forFeature([User]),
   ],
 })
 export class DatabaseModule {}

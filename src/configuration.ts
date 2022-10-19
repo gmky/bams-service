@@ -7,6 +7,7 @@ export default () => {
   let envConfig = {};
   const fileName = `application-${process.env.NODE_ENV || 'dev'}.yaml`;
   Object.entries(process.env)
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     .filter(([key, value]) => key.startsWith('NESTJS_'))
     .map(([key, value]) => ({
       key: key.substring(7).replace('_', '.').toLowerCase(),
