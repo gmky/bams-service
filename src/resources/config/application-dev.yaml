@@ -9,7 +9,7 @@ database:
   type: mariadb
   host: localhost
   port: 3306
-  user: bams
+  user: root
   pass: b15dcpt082
   name: bams
 
