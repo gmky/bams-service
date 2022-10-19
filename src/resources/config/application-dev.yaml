@@ -1,0 +1,35 @@
+app:
+  name: BAMS
+  description: Building & Accessories Management System
+
+server:
+  port: 3000
+
+database:
+  type: mariadb
+  host: localhost
+  port: 3306
+  user: bams
+  pass: b15dcpt082
+  name: bams
+
+jwt:
+  issuer: bams
+  secret: wklj102ewiqkdn190283he1283heijBNA8uIG912h31o
+  expiration:
+    enabled: true
+    time: 10h
+
+openapi:
+  name: BAMS OpenAPI Docs
+  description: Building & Accessories Management System
+  version: 1.0.0
+  path: api-docs
+
+logging:
+  level:
+    - error
+    - warn
+    - info
+    - debug
+    - verbose
