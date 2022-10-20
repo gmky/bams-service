@@ -7,14 +7,6 @@
       { "include": "resources/config/*.yaml", "outDir": "./dist" },
       { "include": "resources/templates/**/*", "outDir": "./dist" }
     ],
-    "plugins": [
-      {
-        "name": "@nestjs/swagger",
-        "options": {
-          "classValidatorShim": false
-        }
-      }
-    ],
     "watchAssets": true
   }
 }

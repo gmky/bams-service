@@ -23,11 +23,11 @@ export class User {
   @Column({ comment: 'Tên hiển thị', length: 255 })
   name: string;
 
-  @Exclude()
+  @Exclude({ toPlainOnly: true })
   @Column({ name: 'salt', comment: 'Mã salt mật khẩu', length: 255 })
   salt: string;
 
-  @Exclude()
+  @Exclude({ toPlainOnly: true })
   @Column({ unique: true, comment: 'Mật khẩu', length: 1000 })
   password: string;
 
